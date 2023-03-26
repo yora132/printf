@@ -7,14 +7,16 @@
  */
 int print_integer(va_list args, int num)
 {
-    int zero_value = 0;
+     int zero_value = 0;
 	int i = 0, result = 0;
 	int number, reverse_number;
 	char a;
-
+    va_list args_copy;
+    va_copy(args_copy, args);
+	
 	for (i = 0; i < num; i++)
-		(void) va_arg(args, int);
-	number = va_arg(args, int);
+		(void) va_arg(args_copy, int);
+	number = va_arg(args_copy, int);
 	if (number == 0)
 	{
 		a = '0';
@@ -57,5 +59,6 @@ int print_integer(va_list args, int num)
         }
 
 	}
+	va_end(args_copy);
 	return (result);
 }
