@@ -38,9 +38,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else if (format[i] == '\n')
-		{
 			write(STDOUT_FILENO, &format[i], 1);
-		}
 		else
 		{
 			write(1, &format[i], 1);
