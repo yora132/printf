@@ -26,6 +26,15 @@ int _printf(const char *format, ...)
 					char_printed += print_string(args, printed_arguments);
 					printed_arguments++;
 					break;
+				case '%':
+					char_printed++;
+					write(1, &format[i], 1);
+					printed_arguments++;
+					break;
+				case 'd': case 'i':
+					char_printed += print_integer(args, printed_arguments);
+					printed_arguments++;
+					break;
 			}
 		}
 		else if (format[i] == '\n')
