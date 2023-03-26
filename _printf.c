@@ -1,50 +1,41 @@
 #include "main.h"
 /**
- * _printf - produces output according to a format.
- * @format: s a character string. The format string is
- * composed of zero or more directives.
- * Return: integer => the number of characters printed
-*/
-int _printf(const char *format, ...)
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
+ */
+
+int _printf(const char * const format, ...)
 {
+	convert_match m[] = {
+		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37}};
 	va_list args;
-	int i, char_printed = 1, printed_arguments = 0;
+	int i = 0, j, len = 0;
 
 	va_start(args, format);
-	for (i = 0; format && format[i] != '\0'; i++)
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+Here:
+
+	while (format[i] != '\0')
 	{
-		if (format[i] == '%')
+		j = 3;
+		while (j >= 0)
 		{
-			i++;
-			switch (format[i])
+			if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 			{
-				case 'c':
-					char_printed += print_char(args, printed_arguments);
-					printed_arguments++;
-					break;
-				case 's':
-					char_printed += print_string(args, printed_arguments);
-					printed_arguments++;
-					break;
-				case '%':
-					char_printed++;
-					write(1, &format[i], 1);
-					printed_arguments++;
-					break;
-				case 'd': case 'i':
-					char_printed += print_integer(args, printed_arguments);
-					printed_arguments++;
-					break;
+				len += m[j].f(args);
+				i = i + 2;
+				goto Here;
 			}
+			j--;
 		}
-		else if (format[i] == '\n')
-			write(STDOUT_FILENO, &format[i], 1);
-		else
-		{
-			write(1, &format[i], 1);
-			char_printed++;
-		}
+		_putchar(format[i]);
+		len++;
+		i++;
 	}
 	va_end(args);
-	return (char_printed);
+	return (len);
 }
+
