@@ -7,6 +7,7 @@
  */
 int print_integer(va_list args, int num)
 {
+    int zero_value = 0;
 	int i = 0, result = 0;
 	int number, reverse_number;
 	char a;
@@ -31,7 +32,12 @@ int print_integer(va_list args, int num)
 			number *= -1;
 		}
 		reverse_number = number % 10;
+        if(reverse_number == 0)
+        {
+            zero_value = 1;
+        }
 		number = number / 10;
+        result++;
 		while (number > 0)
 		{
 			reverse_number = (reverse_number * 10) + (number % 10);
@@ -44,6 +50,12 @@ int print_integer(va_list args, int num)
 			write(1, &a, 1);
 			reverse_number /= 10;
 		}
+        if (zero_value)
+        {
+            a= '0';
+            write(1, &a, 1);
+        }
+
 	}
 	return (result);
 }
