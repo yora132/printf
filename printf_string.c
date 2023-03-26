@@ -20,10 +20,10 @@ int printf_string(va_list args)
 	}
 	else
 	{
-		s = "(null)";
+		str = "(null)";
 		len = _strlen(str);
 		for (i = 0; i < len; i++)
-			_putchar(dtr[i]);
+			_putchar(str[i]);
 		return (len);
 	}
 }
