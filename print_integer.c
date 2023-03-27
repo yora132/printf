@@ -11,7 +11,7 @@ int print_integer(va_list args)
 	long int number, reverse_number;
 	char a;
 
-	number = va_arg(args, long int);
+	number = va_arg(args, int);
 	if (number == 0)
 	{
 		a = '0';
