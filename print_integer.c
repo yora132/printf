@@ -22,7 +22,7 @@ int print_integer(va_list args)
 	}
 	else
 		num = n;
-	while (n / num_digits > 9)
+	while (num / num_digits > 9)
 		num_digits *= 10;
 	while (num_digits != 0)
 	{
