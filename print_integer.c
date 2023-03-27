@@ -52,7 +52,7 @@ int print_integer(va_list args)
  * @num: input
  * Return: void
  */
-void print_postive(int num)
+void print_postive(long int num)
 {
 	char a;
 
