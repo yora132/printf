@@ -15,12 +15,12 @@ int main(void)
         printf("Number:[%d]\n", 0);
         _printf("Number:[%d]\n", 2147483647);
         printf("Number:[%d]\n", 2147483647);
-        _printf("Number:[%d]\n", -2147483648);
-        printf("Number:[%d]\n", -2147483648);
+        _printf("Number:[%d]\n", - 2147483648);
+        printf("Number:[%d]\n", - 2147483648);
         _printf("Number:[%d]\n", 9876543210);
         printf("Number:[%d]\n", 9876543210);
-        _printf("Number:[%d]\n", 001);
-        printf("Number:[%d]\n", 001);
+        _printf("Number:[%d]\n", 500);
+        printf("Number:[%d]\n", 500);
 	_printf("Character:[%c]\n", 'H');
    	printf("Character:[%c]\n", 'H');
    	_printf("String:[%s]\n", "I am a string !");
