@@ -12,12 +12,11 @@ int print_integer(va_list args)
 	char a;
 
 	number = va_arg(args, int);
-	/*printf("%d\n", number);*/
 	if (number == 0)
 	{
 		a = '0';
 		result++;
-		write(1, &a, 1);;
+		write(1, &a, 1);
 	}
 	else
 	{
@@ -39,12 +38,7 @@ int print_integer(va_list args)
 			number /= 10;
 			result++;
 		}
-		while (reverse_number > 0)
-		{
-			a = reverse_number % 10 + '0';
-			write(1, &a, 1);
-			reverse_number /= 10;
-		}
+		print_postive(reverse_number);
 		if (zero_value)
 		{
 			a = '0';
@@ -52,4 +46,20 @@ int print_integer(va_list args)
 		}
 	}
 	return (result);
+}
+/**
+ * print_postive - handles print
+ * @num: input
+ * Return: void
+ */
+void print_postive(int num)
+{
+	char a;
+
+	while (num > 0)
+	{
+		a = num % 10 + '0';
+		write(1, &a, 1);
+		num /= 10;
+	}
 }

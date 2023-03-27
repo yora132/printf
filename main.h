@@ -30,6 +30,6 @@ int _strlen(char *str);
 int printf_char(va_list args);
 int printf_string(va_list args);
 int print_integer(va_list args);
-
+void print_postive(int num);
 
 #endif
