@@ -7,8 +7,8 @@
 int print_integer(va_list args)
 {
 	int res = 0;
-	int num_digits = 1;
-	int n;
+	long int num_digits = 1;
+	long int n;
 	unsigned int num;
 	char a;
 
