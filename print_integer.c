@@ -8,7 +8,7 @@ int print_integer(va_list args)
 {
 	int zero_value = 0;
 	int result = 0;
-	int number, reverse_number;
+	long int number, reverse_number;
 	char a;
 
 	number = va_arg(args, int);
