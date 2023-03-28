@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	convert_match m[] = {
 		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37},
 			{"%d", print_integer}, {"%i", print_integer},
-			{"%b", print_binary}, {"%r", printf_srev}};
+			{"%b", print_binary}, {"%r", printf_srev}, {"%R", printf_rot13}};
 	va_list args;
 	int i = 0, j, len = 0;
 
