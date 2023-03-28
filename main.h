@@ -40,5 +40,7 @@ int print_hex(va_list args);
 int print_heX(va_list args);
 int printf_special_string(va_list args);
 int printf_HEX_aux(unsigned int num);
+int printf_hex_aux(unsigned long int num);
+int printf_pointer(va_list args);
 
 #endif
