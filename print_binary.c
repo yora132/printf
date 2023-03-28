@@ -16,7 +16,7 @@ int print_binary(va_list args)
 	if (num < 1)
 		return (-1);
 	res = base_len(num, 2);
-	str = malloc(sizeof(char) * len + 1);
+	str = malloc(sizeof(char) * res + 1);
 	if (str == NULL)
 		return (-1);
 	for (i = 0; num > 0; i++)
@@ -30,8 +30,7 @@ int print_binary(va_list args)
 	str[i] = '\0';
 	for (i = i - 1; i >= 0; i--)
 		_putchar(str[i]);
-	free(str);
-	return (len);
+	return (res);
 }
 /**
  * base_len - calculates the length of a number

@@ -5,11 +5,11 @@
  * Return: the length of the string.
  */
 
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	convert_match m[] = {
 		{"%s", printf_string}, {"%c", printf_char}, {"%%", printf_37},
-			{"%d", print_integer}, {"%i", print_integer}
+			{"%d", print_integer}, {"%i", print_integer},
 			{"%b", print_binary}};
 	va_list args;
 	int i = 0, j, len = 0;
@@ -40,4 +40,3 @@ Here:
 	va_end(args);
 	return (len);
 }
-
