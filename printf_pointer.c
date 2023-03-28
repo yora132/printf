@@ -37,9 +37,9 @@ int printf_pointer(va_list args)
  */
 int printf_hex_aux(unsigned long int num)
 {
-	int res = 0;
-	int i;
-	int *hex_rep;
+	long int res = 0;
+	long int i;
+	long int *hex_rep;
 	unsigned long int n = num;
 
 	while (num / 16 != 0)
