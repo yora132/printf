@@ -47,3 +47,38 @@ unsigned int base_len(unsigned int num, int base)
 		num = num / base;
 	return (i);
 }
+/**
+ * print_octal - Prints the numeric representation of a number in octal base
+ * @args: List of all the arguments passed to the program
+ * Return: integer
+ */
+int print_octal(va_list args)
+{
+	unsigned int num;
+	int res, i;
+	char *octal_rep;
+
+	num = va_arg(args, unsigned int);
+
+	if (num == 0)
+	{
+		res++;
+		_putchar('0');
+	}
+	if (num < -1)
+		return (-1);
+	res = base_len(num, 8);
+	octal_rep = malloc(sizeof(char) * res +1);
+	if (octal_rep == NULL)
+		return (-1);
+	for (res = 0; num > 0; i++)
+	{
+		octal_rep[res] = (num % 8) +48;
+		num /= 8;
+	}
+	octal_rep[res] = '\0';  
+	for (i = res - 1; i >= 0; i--)
+		_putchar(octal_rep[i]);
+	free(octal_rep);
+	return (res);
+}

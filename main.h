@@ -35,5 +35,5 @@ int print_binary(va_list args);
 unsigned int base_len(unsigned int num, int base);
 int printf_srev(va_list args);
 int printf_rot13(va_list args);
-
+int print_unsigned(va_list args);
 #endif

@@ -34,3 +34,38 @@ int print_integer(va_list args)
 	}
 	return (res);
 }
+/**
+ * print_unsigned - Prints an unsigned number
+ * @args: input
+ * Return: int
+ */
+int unsigned_integer(va_list args)
+{
+	unsigned int num;
+	int res = 0;
+	int num_digits = 1;
+	char a;
+
+	num = va_arg(args, unsigned int);
+	if (num == 0)
+	{
+		_putchar('0');
+		res++;
+	}
+	if (num < 1)
+		return (-1);
+	else if (num >= 1)
+	{
+		while (num / num_digits > 9)
+			num_digits *= 10;
+		while (num_digits != 0)
+		{
+			a = (num / num_digits) + '0';
+			_putchar(a);
+			num %= num_digits;
+			num_digits /= 10;
+			res++;
+		}
+	}
+	return (res);
+}
