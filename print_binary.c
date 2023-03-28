@@ -30,6 +30,7 @@ int print_binary(va_list args)
 	str[i] = '\0';
 	for (i = i - 1; i >= 0; i--)
 		_putchar(str[i]);
+	free(str);
 	return (res);
 }
 /**
