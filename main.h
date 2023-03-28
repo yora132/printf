@@ -31,6 +31,7 @@ int _strlen(char *str);
 int printf_char(va_list args);
 int printf_string(va_list args);
 int print_integer(va_list args);
-
+int print_binary(va_list list);
+unsigned int base_len(unsigned int num, int base);
 
 #endif
