@@ -49,7 +49,7 @@ int printf_hex_aux(unsigned long int num)
 	}
 	res++;
 
-	hex_rep = malloc(sizeof(int) * res);
+	hex_rep = malloc(sizeof(long int) * res);
 
 	for (i = 0; i < res; i++)
 	{
