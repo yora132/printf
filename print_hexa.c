@@ -25,7 +25,7 @@ int print_hex(va_list args)
 
 	for (i = 0; i < res; i++)
 	{
-		hex_rep = n % 16;
+		hex_rep[i] = n % 16;
 		n /= 16;
 	}
 	for (i = res - 1; i >= 0; i--)
@@ -63,7 +63,7 @@ int print_heX(va_list args)
 
 	for (i = 0; i < res; i++)
 	{
-		hex_rep = n % 16;
+		hex_rep[i] = n % 16;
 		n /= 16;
 	}
 	for (i = res - 1; i >= 0; i--)
