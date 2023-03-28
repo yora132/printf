@@ -39,7 +39,7 @@ int print_integer(va_list args)
  * @args: input
  * Return: int
  */
-int unsigned_integer(va_list args)
+int print_unsigned(va_list args)
 {
 	unsigned int num;
 	int res = 0;
