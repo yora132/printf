@@ -7,6 +7,8 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define BUFSIZE 1024
+char buf[BUFSIZE];
 
 /**
  * struct format - match the conversion specifiers for printf
