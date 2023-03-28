@@ -30,9 +30,8 @@ int printf_pointer(va_list args)
 	return (b + 2);
 }
 
-#include "main.h"
 /**
- * print_hex - Prints a representation of a decimal number on base16 lowercase
+ * printf_hex_aux - Prints a representation of a decimal number on  lowercase
  * @num: input
  * Return: output integer
  */
