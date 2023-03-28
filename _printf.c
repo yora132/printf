@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 			{"%d", print_integer}, {"%i", print_integer},
 			{"%b", print_binary}, {"%r", printf_srev}, {"%R", printf_rot13},
 			{"%u", print_unsigned}, {"%o", print_octal},
-			{"%x", print_hex}, {"%X", print_heX}, {"%S", printf_special_string}, {"%p", printf_pointer}};
+			{"%x", print_hex}, {"%X", print_heX}, {"%S", printf_special_string},
+			{"%p", printf_pointer}};
 	va_list args;
 	int i = 0, j, len = 0;
 
