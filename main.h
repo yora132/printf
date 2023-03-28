@@ -45,5 +45,8 @@ int printf_srev(va_list args);
 int printf_rot13(va_list args);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
+int print_hex(va_list args);
+int print_heX(va_list args);
+int hex_check(int num, char x);
 
 #endif
