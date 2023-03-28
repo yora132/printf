@@ -6,13 +6,11 @@
  */
 int print_hex(va_list args)
 {
-	unsigned int num;
 	int res = 0;
 	int i;
 	int *hex_rep;
-	unsigned int n = num
-
-	num = va_arg(args, unsigned int);
+	unsigned int num = va_arg(args, unsigned int);
+	unsigned int n = num;
 
 	while (num / 16 != 0)
 	{
@@ -44,13 +42,11 @@ int print_hex(va_list args)
  */
 int print_heX(va_list args)
 {
-	unsigned int num;
 	int res = 0;
 	int i;
 	int *hex_rep;
-	unsigned int n = num
-
-	num = va_arg(args, unsigned int);
+	unsigned int num = va_arg(args, unsigned int);
+	unsigned int n = num;
 
 	while (num / 16 != 0)
 	{
