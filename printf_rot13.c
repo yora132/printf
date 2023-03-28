@@ -33,5 +33,5 @@ int printf_rot13(va_list args)
 			count++;
 		}
 	}
-	return (counter);
+	return (count);
 }
