@@ -22,15 +22,6 @@ typedef struct format
 } convert_match;
 
 
-/**
- * struct flags - struct containing flags to "turn on"
- * when a flag specifier is passed to _printf()
- * @plus: flag for the '+' character
- * @space: flag for the ' ' character
- * @hash: flag for the '#' character
- */
-
-
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -47,6 +38,5 @@ int print_unsigned(va_list args);
 int print_octal(va_list args);
 int print_hex(va_list args);
 int print_heX(va_list args);
-int hex_check(int num, char x);
 
 #endif
