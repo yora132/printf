@@ -9,7 +9,7 @@ int print_hex(va_list args)
 	unsigned int num;
 	int res = 0;
 	int i;
-	char *hex_rep;
+	int *hex_rep;
 	unsigned int n = num
 
 	num = va_arg(args, unsigned int);
@@ -47,7 +47,7 @@ int print_heX(va_list args)
 	unsigned int num;
 	int res = 0;
 	int i;
-	char *hex_rep;
+	int *hex_rep;
 	unsigned int n = num
 
 	num = va_arg(args, unsigned int);
