@@ -29,12 +29,6 @@ typedef struct format
  * @space: flag for the ' ' character
  * @hash: flag for the '#' character
  */
-typedef struct flags
-{
-	int plus;
-	int space;
-	int hash;
-} flags_t;
 
 
 
@@ -51,6 +45,5 @@ int printf_srev(va_list args);
 int printf_rot13(va_list args);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
-int get_flag(char s, flags_t *f);
 
 #endif
