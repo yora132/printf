@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <limits.h>
 
-#define BUFF_SIZE 1024
 
 /**
  * struct format - match the conversion specifiers for printf
