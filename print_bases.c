@@ -6,13 +6,17 @@
  */
 int print_binary(va_list args)
 {
-	int res, i;
+	int res = 0, i;
 	unsigned int num;
 	char *str;
 
 	num = va_arg(args, unsigned int);
 	if (num == 0)
+	{
 		_putchar('0');
+		res++;
+		return (res);
+	}
 	if (num < 1)
 		return (-1);
 	res = base_len(num, 2);
