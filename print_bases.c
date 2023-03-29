@@ -68,6 +68,7 @@ int print_octal(va_list args)
 	{
 		res++;
 		_putchar('0');
+		return (res);
 	}
 	if (num < 1)
 		return (-1);
