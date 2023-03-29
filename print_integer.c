@@ -51,6 +51,7 @@ int print_unsigned(va_list args)
 	{
 		_putchar('0');
 		res++;
+		return (res);
 	}
 	if (num < 1)
 		return (-1);
